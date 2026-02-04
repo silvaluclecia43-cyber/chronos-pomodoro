@@ -1,10 +1,9 @@
-function App() {
-  
+import { MeuPrimeiroComponente } from "./components/Meu Primeiro Componente";
+
+export function App() {
   return (
     <>
-     <h1>ola mundo</h1>
+      <MeuPrimeiroComponente />
     </>
-  )
+  );
 }
-
-export default App
