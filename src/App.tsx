@@ -1,9 +1,11 @@
-import { MeuPrimeiroComponente } from "./components/Meu Primeiro Componente";
+import { FormularioDois } from './components/FormularioDois';
 
 export function App() {
   return (
     <>
-      <MeuPrimeiroComponente />
+      <FormularioDois />
+    
     </>
   );
 }
+export default App;
