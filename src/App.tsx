@@ -1,10 +1,9 @@
-import { FormularioDois } from './components/FormularioDois';
+import { FormularioAlunos } from './components/FormularioAlunos';
 
 export function App() {
   return (
     <>
-      <FormularioDois />
-    
+      <FormularioAlunos />    
     </>
   );
 }
