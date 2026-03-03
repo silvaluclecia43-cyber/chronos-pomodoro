@@ -205,7 +205,7 @@ export function FormularioAlunos() {
             <strong>matricula</strong> {enviarDados.matricula}
           </p>
           <p>
-            <strong>coordenado</strong>
+            <strong>coordenadou</strong>
           </p>
           {/*Exibe o email enviado*/}
           <p>
