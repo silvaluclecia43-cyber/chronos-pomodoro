@@ -12,15 +12,15 @@ export function FormularioAlunos() {
   const [nome, setNome] = useState<string>('');
   const [sobrenome, setSobrenome] = useState<string>('');
   const [datadenascimento, setDatadeNascimento] = useState<string>('');
-  const [idade, setIdade] = useState<string>('');
+  const [idade, setIdade] = useState<number | null>(null);
   const [endereço, setEndereço] = useState<string>('');
   const [telefone, setTelefone] = useState<string>('');
   const [nomeEscola, setNomeEscola] = useState<string>('');
   const [série, setSérie] = useState<string>('');
   const [turno, setTurno] = useState<string>('');
-  const [matricula, setMatricula] = useState<string>('')
-  const [coordenador,setCoordenador] = useState<string>('')
-
+  const [matricula, setMatricula] = useState<string>('');
+  const [coordenador, setCoordenador] = useState<string>('');
+  
   const [email, setEmail] = useState<string>('');
 
   const [enviarDados, setEnviarDados] = useState<{
@@ -28,14 +28,14 @@ export function FormularioAlunos() {
     sobrenome: string;
     email: string;
     datadenascimento: string;
-    idade: string;
+    idade: number | null;
     endereço: string;
     telefone: string;
     nomeEscola: string;
     série: string;
     turno: string;
-    matricula: string
-    coordenador: string
+    matricula: string;
+    coordenador: string;
   } | null>(null);
 
   function enviarFormulario(evento: React.FormEvent<HTMLFormElement>) {
@@ -53,14 +53,14 @@ export function FormularioAlunos() {
       série: série,
       turno: turno,
       matricula: matricula,
-      coordenador: coordenador
+      coordenador: coordenador,
     });
 
     //zerando costantes iniciais
     setNome('');
     setSobrenome('');
     setDatadeNascimento('');
-    setIdade('');
+    setIdade(0);
     setEmail('');
     setEndereço('');
     setTelefone('');
@@ -68,7 +68,7 @@ export function FormularioAlunos() {
     setSérie('');
     setTurno('');
     setMatricula('');
-   setCoordenador('')
+    setCoordenador('');
   }
 
   return (
@@ -100,10 +100,10 @@ export function FormularioAlunos() {
         />
 
         <input
-          type='text' // TIPO DO INPUT
+          type='number' // TIPO DO INPUT
           placeholder='idade' //TEXTO EXIBIDO QUANDO ESTÁ VAZIO
-          value={idade} //VALOR CONTROLADO
-          onChange={evento => setIdade(evento.target.value)}
+          value={idade ?? ''} //VALOR CONTROLADO
+          onChange={evento => setIdade(Number(evento.target.value))}
         />
 
         <input
@@ -121,7 +121,7 @@ export function FormularioAlunos() {
         />
         <input
           type='text' // TIPO DE INPUT
-          placeholder='nomeEscola' // TEXTO EXIBIDO QUANDO ESTA VAZIO
+          placeholder='Nome da escola' // TEXTO EXIBIDO QUANDO ESTA VAZIO
           value={nomeEscola} // VALOR CONTROLADO
           onChange={evento => setNomeEscola(evento.target.value)}
         />
@@ -135,7 +135,7 @@ export function FormularioAlunos() {
 
         <input
           type='tex' // TIPO DE INPUT
-          placeholder ='turno'// TEXTO EXIBIDO QUANDO ESTA VAZIO
+          placeholder='turno' // TEXTO EXIBIDO QUANDO ESTA VAZIO
           value={turno} // VALOR CONTROLADO
           onChange={evento => setTurno(evento.target.value)}
         />
@@ -187,25 +187,25 @@ export function FormularioAlunos() {
             <strong>idade:</strong> {enviarDados.idade}
           </p>
           <p>
-            <strong>endereço</strong> {enviarDados.endereço}
+            <strong>endereço:</strong> {enviarDados.endereço}
           </p>
           <p>
-            <strong>telefone</strong> {enviarDados.telefone}
+            <strong>telefone:</strong> {enviarDados.telefone}
           </p>
           <p>
-            <strong>nomeEscola</strong> {enviarDados.nomeEscola}
+            <strong>nomeEscola:</strong> {enviarDados.nomeEscola}
           </p>
           <p>
-            <strong>série</strong> {enviarDados.série}
+            <strong>série:</strong> {enviarDados.série}
           </p>
           <p>
-            <strong>turno</strong> {enviarDados.turno}
+            <strong>turno:</strong> {enviarDados.turno}
           </p>
           <p>
-            <strong>matricula</strong> {enviarDados.matricula}
+            <strong>matricula:</strong> {enviarDados.matricula}
           </p>
           <p>
-            <strong>coordenadou</strong>
+            <strong>coordenador:</strong> {enviarDados.coordenador}
           </p>
           {/*Exibe o email enviado*/}
           <p>
