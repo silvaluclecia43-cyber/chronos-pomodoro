@@ -1,10 +1,7 @@
-import { FormularioAlunos } from './components/FormularioAlunos';
+import './styles/global.css';
+import './styles/theme.css';
 
 export function App() {
-  return (
-    <>
-      <FormularioAlunos />    
-    </>
-  );
+  return <></>;
 }
 export default App;
