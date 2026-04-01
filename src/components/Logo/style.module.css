@@ -1,0 +1,35 @@
+/*Componente principal */
+
+.logo{
+    display: flex; /*Ativa o flexbox para organizar os elementos internos*/
+    align-items: center; /*Alinha os intens verticalmente no centro*/
+    justify-content: center; /*Centraliza os intens horizontamente*/
+    gap: 2.4rem; /*Espaçamento entre os elementos*/
+    padding-top: 3.2rem ; /*Espaço interno no contorno do container*/
+}
+
+/*Link que envolve o logo*/
+.logolink{
+    display: flex;
+    flex-direction: column; /*Ccoloca os intens um abaixo do outro (verticalmente)*/
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder; /*deixa o texto em negrito*/
+    gap: 0.4rem;
+    font-size: 4.2rem; /*Tamanho grande da fonte de texto*/
+    text-decoration: none; /*Remove o sublinado padrão de links*/
+    color: var(--primary); /*Usa variável css global criada*/
+    transition: all 0.1s ease-in-out; /*Anima mudanças de estilo suavemente*/
+}
+
+/*Estilo aplicado quando o mouse passa sobre o link*/
+.logolink:hover {
+    filter: brightness(50%); /*Diminui a luminosidade em 50% */
+}
+
+/*Estilo especifico para qualquer SVG dentro de logolink */
+.logolink svg {
+    width: 6.4rem; /* Define largura do icone*/
+    height: 6.4rem; /*Define a altura do icone*/
+}
+

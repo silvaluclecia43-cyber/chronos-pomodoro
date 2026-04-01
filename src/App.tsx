@@ -1,7 +1,25 @@
+import { Container } from './components/Container';
+import { Logo } from './components/Logo';
 import './styles/global.css';
 import './styles/theme.css';
-
 export function App() {
-  return <></>;
+  return (
+    <>
+      <Container>
+        <Logo />
+      </Container>
+
+      <Container>
+        <section>MENU</section>
+      </Container>
+
+      <Container>
+        <section>FORMULÁRIO</section>
+      </Container>
+
+      <Container>
+        <section>RODAPÉ</section>
+      </Container>
+    </>
+  );
 }
-export default App;
