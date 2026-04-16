@@ -1,0 +1,31 @@
+.menu {
+  display: flex; /*Ativa o flexbox para organizar os elementos internos*/
+  align-items: center; /*Alinha os intens verticalmente no centro*/
+  justify-content: center; /*Centraliza os intens horizontamente*/
+  gap: 2.4rem; /*Espaçamento entre os elementos*/
+
+}
+
+/*Link que envolve o logo*/
+.menuLink{
+  display: inline-flex; /*alinhamento em linha horizontal*/
+  align-items: center; /*centraliza os itens*/
+  justify-content: center; /* centraliza*/
+  text-decoration: none; /*Remove o sublinado padrão de links*/
+  color: var(--text-over-primary); /*usa variável css global criada*/
+  transition: all 0.1s ease-in-out; /*Anima mudanças de estilosuavemente*/
+  background: var(--primary); /*cor de fundo do link*/
+  border-radius: 0.8rem; /*arredondamento do para o link*/
+  padding: 1.2rem; /*Tamanho do botão do link*/
+}
+
+/*Estilo aplicado quando o mouse passa sobre o link*/
+.menuLink:hover {
+  filter: brightness(50%); /*Diminui a luminosidade em 50% */
+}
+
+/*Estilo especifico para qualquer SVG dentro de logolink */
+.menuLink svg {
+  width: 2.4rem; /* Define largura do icone*/
+  height: 2.4rem; /*Define a altura do icone*/
+}

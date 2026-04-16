@@ -1,5 +1,7 @@
+import { Contador } from './components/Contador';
 import { Container } from './components/Container';
 import { Logo } from './components/Logo';
+import { Menu } from './components/Menu';
 import './styles/global.css';
 import './styles/theme.css';
 export function App() {
@@ -10,7 +12,11 @@ export function App() {
       </Container>
 
       <Container>
-        <section>MENU</section>
+        <Menu />
+      </Container>
+
+      <Container>
+        <Contador />
       </Container>
 
       <Container>
